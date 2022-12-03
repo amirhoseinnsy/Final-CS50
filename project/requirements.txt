@@ -1,0 +1,8 @@
+cs50
+Flask
+Flask-Session
+requests
+CREATE TABLE users (id INTEGER NOT NULL, username TEXT NOT NULL, password TEXT NOT NULL, color TEXT, number INTEGER);
+CREATE TABLE buy(id INTEGER NOT NULL, year INTEGER, month INTEGER, day INTEGER, hour INTEGER, minute INTEGER,vehicle TEXT, FOREIGN KEY(id) REFERENCES users(id));
+CREATE TABLE refund(id INTEGER NOT NULL, year INTEGER, month INTEGER, day INTEGER, hour INTEGER, minute INTEGER,vehicle TEXT, FOREIGN KEY(id) REFERENCES users(id));
+CREATE TABLE property (id INTEGER NOT NULL, cash INTEGER NOT NULL DEFAULT 0, name TEXT, number INTEGER, FOREIGN KEY(id) REFERENCES users(id), FOREIGN KEY(number) REFERENCES users(number));

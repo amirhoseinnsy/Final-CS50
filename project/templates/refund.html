@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Refund
+{% endblock %}
+
+{% block main %}
+    <!-- get data from user to buying ticket -->
+    <div class="container text-center">
+        <h1 id="refund_head">Refund</h1>
+        <div class="row align-items-center">
+            <div class="col-3">
+            </div>
+            <div class="col-6">
+                <form action="/refund" method="post">
+                    <select name="origin" id="origin_input">
+                        <option value="None" selected disabled>None</option>
+                        {% for temp in trip %}
+                            <option value="{{ temp["origin"] }}">{{ temp["origin"] }}</option>
+                        {% endfor %}
+                    </select>
+                    <select name="destination" id="destination_input">
+                        <option value="None" selected disabled>None</option>
+                        {% for temp in trip %}
+                            <option value="{{ temp["destination"] }}">{{ temp["destination"] }}</option>
+                        {% endfor %}
+                    </select>
+                    <select name="vehicle" id="vehicle_input">
+                        <option value="None" selected disabled>None</option>
+                        {% for temp in trip %}
+                            <option value="{{ temp["vehicle"] }}">{{ temp["vehicle"] }}</option>
+                        {% endfor %}
+                    </select>
+                    <button type="submit" class="btn btn-primary" id="refund_input">Submit</button>
+                </form>
+                <div class="col-3">
+                </div>
+            </div>
+          </div>
+    </div>
+{% endblock %}

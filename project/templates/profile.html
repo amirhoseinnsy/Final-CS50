@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Profile
+{% endblock %}
+
+{% block main %}
+    <!-- get data from user to log in -->
+    <div class="container text-center">
+        <h1 id="login_head">New Profile</h1>
+        <div class="row align-items-center">
+            <div class="col-3">
+            </div>
+            <div class="col-6">
+                <form action="/profile" method="post">
+                    <input class="form-control form-control-lg" type="text" placeholder="Name" name="name" id="profile_input">
+                    <input class="form-control form-control-lg" type="text" placeholder="Number" name="number" id="profile_input">
+                    <input class="form-control form-control-lg" type="number" placeholder="Cash" name="cash" id="profile_input">
+                    <button type="submit" class="btn btn-primary" id="profile_input">Submit</button>
+                </form>
+                <a href="/change_password">Change Password</a>
+                <div class="col-3">
+                </div>
+            </div>
+          </div>
+    </div>
+    <hr>
+    <!-- show data we have just now -->
+    <div class="container text-center">
+        <h2>Profile</h2>
+        <div class="row align-items-center">
+            <table class="table table-success table-striped">
+                <thead>
+                    <tr>
+                        <td>Cash</td>
+                        <td>Name</td>
+                        <td>Number</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{ property["cash"] }}</td>
+                        <td>{{ property["name"] }}</td>
+                        <td>{{ property["number"] }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {% if buy %}
+    <hr>
+    <div class="container text-center">
+        <h2>Tickets</h2>
+        <div class="row align-items-center">
+            <table class="table table-success table-striped">
+                <thead>
+                    <tr>
+                        <td>Origin</td>
+                        <td>Destination</td>
+                        <td>Vehicle</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for temp in buy %}
+                    <tr>
+                        <td>{{ temp["origin"] }}</td>
+                        <td>{{ temp["destination"] }}</td>
+                        <td>{{ temp["vehicle"] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Change
+{% endblock %}
+
+{% block main %}
+    <!-- get data from user to change username & password -->
+    <div class="container text-center">
+        <h1 id="buy_head">Change</h1>
+        <div class="row align-items-center">
+            <div class="col-3">
+            </div>
+            <div class="col-6">
+                <form action="/buy" method="post">
+                    <input class="form-control form-control-lg" type="text" placeholder="Username" name="username" id="username_input" required>
+                    <input class="form-control form-control-lg" type="text" placeholder="Password" name="password" id="password_input" required>
+                    <button type="submit" class="btn btn-primary" id="login_input">Submit</button>
+                </form>
+                <div class="col-3">
+                </div>
+            </div>
+          </div>
+    </div>
+{% endblock %}

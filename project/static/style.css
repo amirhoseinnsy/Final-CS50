@@ -1,0 +1,111 @@
+.nav-element {
+    display: inline;
+    float: right;
+}
+
+.btn-primary {
+    width: 200px;
+}
+
+#nav-h {
+    margin: 15px;
+}
+
+#register_input {
+    margin: 10px;
+}
+
+#register_head {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#login_head {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#login_input {
+    margin: 10px;
+}
+
+#index_image {
+    float: right;
+    height: 800px;
+}
+
+#p_1:hover {
+    background-color: aqua;
+}
+
+#p_1_head_major {
+    margin-bottom: 40px;
+}
+
+#p_1_major{
+    text-align: left;
+}
+
+#p_1_sub {
+    text-align: left;
+}
+
+#p_1_head_sub {
+    margin-bottom: 40px; 
+}
+
+#p_1_image {
+    height: 700px;
+    width: 700px;
+}
+
+#p_2 {
+    margin-left: 60px;
+}
+
+#p_2:hover {
+    background-color: aqua;
+}
+
+#p_footer {
+    margin-left: 60px;
+}
+
+#vehicle_input {
+    margin: 10px;
+    width: 200px;
+}
+
+#origin_input {
+    margin: 10px;
+}
+
+#destination_input {
+    margin: 10px;
+}
+
+#buy_head {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#refund_head {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#refund_input {
+    margin: 10px;
+}
+
+#profile_input {
+    margin: 10px;
+}
+
+#username_input {
+    margin: 10px;
+}
+
+#password_input {
+    margin: 10px;
+}

@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <!-- get data from user to log in -->
+    <div class="container text-center">
+        <h1 id="login_head">History</h1>
+        <div class="row align-items-center">
+            <div class="col-2">
+            </div>
+            <div class="col-8">
+                <table class="table table-success table-striped">
+                    <thead>
+                        <tr>
+                            <td>Origin</td>
+                            <td>Destination</td>
+                            <td>Vehicle</td>
+                            <td>date</td>
+                            <td>time</td>
+                            <td>Kind</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for temp in history %}
+                            <tr>
+                                <td>{{ temp["origin"] }}</td>
+                                <td>{{ temp["destination"] }}</td>
+                                <td>{{ temp["vehicle"] }}</td>
+                                <td>{{ temp["year"] }}/{{ temp["month"] }}/{{ temp["day"] }}</td>
+                                <td>{{ temp["hour"] }}/{{ temp["minute"] }}</td>
+                                <td>{{ temp["kind"] }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <div class="col-2">
+                </div>
+            </div>
+          </div>
+    </div>
+{% endblock %}
